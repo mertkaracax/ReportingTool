@@ -1,0 +1,48 @@
+.img {
+  animation: rotation 1s infinite linear;
+  animation-iteration-count: 1;
+}
+
+.customFooter {
+  animation: up 1s infinite ease-in;
+  animation-iteration-count: 1;
+}
+
+.card {
+  animation: opac 1s infinite ease-in;
+  animation-iteration-count: 1;
+}
+@keyframes rotation {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+    box-shadow: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    box-shadow: 0 0 7px 7px white;
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes opac {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

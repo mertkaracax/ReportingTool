@@ -1,0 +1,45 @@
+.searchArea {
+  animation: rotationRight 1s infinite linear;
+  animation-iteration-count: 1;
+}
+
+.icon {
+  animation: rotationLeft 1s infinite linear;
+  animation-iteration-count: 1;
+  transition: 500ms;
+}
+.table {
+  animation: tableAnim 1s infinite linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes rotationLeft {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes rotationRight {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes tableAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

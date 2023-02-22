@@ -1,0 +1,13 @@
+.table {
+  animation: tableAnim 1s infinite linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes tableAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

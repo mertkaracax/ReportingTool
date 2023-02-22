@@ -3,9 +3,9 @@ import { DataManager, WebApiAdaptor } from "@syncfusion/ej2-data";
 class dataFetcher {
   constructor() {}
   getProdData(workCenterIds, endDate, startDate) {
-    console.log("WCID: " + workCenterIds[1]);
+    console.log("WCID: " + workCenterIds);
     let workcenterIdsConverted = workCenterIds.reduce((total, id) => {
-      total = total + id + "%2C";
+      return total + id + "%2C";
     }, "");
     let workcenterIdsConvertedd = workcenterIdsConverted.substring(
       0,
@@ -14,8 +14,18 @@ class dataFetcher {
 
     endDate = endDate.substring(0, 10) + "%2000%3A00%3A00";
     startDate = startDate.substring(0, 10) + "%2000%3A00%3A00";
+    let url = `https://softnetmasapi.azurewebsites.net/GetProductionDetails?workCenterIds=${workcenterIdsConvertedd}&startDate=${startDate}&endDate=${endDate}`;
+    console.log(url);
     return new DataManager({
       url: `https://softnetmasapi.azurewebsites.net/GetProductionDetails?workCenterIds=${workcenterIdsConvertedd}&startDate=${startDate}&endDate=${endDate}`,
+      adaptor: new WebApiAdaptor(),
+      crossDomain: true,
+    });
+  }
+
+  getprodDataFromUrl(url){
+    return new DataManager({
+      url: url,
       adaptor: new WebApiAdaptor(),
       crossDomain: true,
     });

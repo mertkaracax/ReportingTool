@@ -1,14 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { AiFillCloseCircle } from "react-icons/ai";
-import {
-  BsFillArrowRightCircleFill,
-  BsFillArrowLeftCircleFill,
-  BsTrash,
-} from "react-icons/bs";
 import { productionFields } from "../data/productionFields";
-import { BiArrowBack } from "react-icons/bi";
-import { TbLogout } from "react-icons/tb";
 import FormComponent from "./FormComponent";
 
 const DataGridForm = (props) => {

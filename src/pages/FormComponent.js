@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./FormComponent.module.css";
-import { AiFillCloseCircle } from "react-icons/ai";
 import {
   BsFillArrowRightCircleFill,
   BsFillArrowLeftCircleFill,
   BsTrash,
 } from "react-icons/bs";
 import { productionFields } from "../data/productionFields";
-import { BiArrowBack } from "react-icons/bi";
-import { TbLogout } from "react-icons/tb";
 
 const FormComponent = (props) => {
   const [filter, setFilter] = useState("");
